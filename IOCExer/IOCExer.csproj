@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D22F3A5-663C-40D8-A0DB-642ECD001996}</ProjectGuid>
+    <ProjectGuid>{F54A4815-EAEC-4541-A5E8-B2B63BC92499}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IOC</RootNamespace>
-    <AssemblyName>IOC</AssemblyName>
+    <RootNamespace>IOCExer</RootNamespace>
+    <AssemblyName>IOCExer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,6 +36,7 @@
       <HintPath>..\packages\Unity.5.8.6\lib\net46\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
@@ -73,9 +74,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CfgFiles\Unity.Config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{4B092DA1-85C1-4940-BFA9-50D7606C8F36}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{C539FF48-3D03-4A7D-9736-7A3F0AFDDE52}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interface\Interface.csproj">
       <Project>{B68E4834-08E2-4DFA-8ECF-998C7F1B7811}</Project>
       <Name>Interface</Name>

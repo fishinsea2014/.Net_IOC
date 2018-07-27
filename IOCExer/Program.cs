@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IOC
+namespace IOCExer
 {
     class Program
     {
@@ -17,10 +17,13 @@ namespace IOC
                 Console.Read();
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
+            
+
         }
     }
 }
