@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Extend", "Service.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCExer", "IOCExer\IOCExer.csproj", "{F54A4815-EAEC-4541-A5E8-B2B63BC92499}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAOP", "TestAOP\TestAOP.csproj", "{FC6B2BD1-7BF8-4377-93E9-B5945FD02469}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{F54A4815-EAEC-4541-A5E8-B2B63BC92499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F54A4815-EAEC-4541-A5E8-B2B63BC92499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F54A4815-EAEC-4541-A5E8-B2B63BC92499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6B2BD1-7BF8-4377-93E9-B5945FD02469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6B2BD1-7BF8-4377-93E9-B5945FD02469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6B2BD1-7BF8-4377-93E9-B5945FD02469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6B2BD1-7BF8-4377-93E9-B5945FD02469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -133,10 +133,31 @@ namespace IOCExer
                     Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
                     UnityConfigurationSection section = (UnityConfigurationSection)configuration.GetSection(UnityConfigurationSection.SectionName);
 
-                    IUnityContainer containerF = new UnityContainer();
-                    section.Configure(containerF, "testContainer");
-                    IPhone phone = containerF.Resolve<IPhone>();
-                    phone.Call();
+                    //IUnityContainer containerF = new UnityContainer();
+                    //section.Configure(containerF, "testContainer");
+                    //IPhone phone = containerF.Resolve<IPhone>();
+                    //phone.Call();
+
+                    Console.WriteLine("====Extend class Android phone====");
+
+                    //IUnityContainer containerE = new UnityContainer();
+                    //section.Configure(containerE, "testContainerE");
+                    //IPhone phoneE = containerF.Resolve<IPhone>();
+                    //phoneE.Call();
+
+                    Console.WriteLine("====IOC + AOP from config file====");
+                    IUnityContainer containerAOP = new UnityContainer();
+                    section.Configure(containerAOP, "testContainerAOP");
+                    IPhone phoneAOP = containerAOP.Resolve<IPhone>();
+                    phoneAOP.Call();
+
+                    //IPhone android = containerF.Resolve<IPhone>("Android");
+                    //android.Call();
+
+                }
+
+                {
+
                 }
             }
 

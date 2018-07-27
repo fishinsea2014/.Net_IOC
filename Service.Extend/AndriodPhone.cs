@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Service.Extend
 {
     public class AndriodPhone : IPhone
     {
@@ -13,14 +13,14 @@ namespace Service
         public IHeadphone iHeadphone { get; set; }
         public IPower iPower { get; set; }
 
-        public void AndroidPhone()
+        public AndriodPhone()
         {
-            Console.WriteLine("{0} construction method", this.GetType().Name);
+            Console.WriteLine("{0}Construction method", this.GetType().Name);
         }
 
         public void Call()
         {
-            Console.WriteLine("{0} make a call", this.GetType().Name); ;
+            Console.WriteLine("{0} Extend make a call", this.GetType().Name); ;
         }
     }
 }
