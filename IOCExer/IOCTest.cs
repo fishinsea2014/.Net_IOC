@@ -126,18 +126,18 @@ namespace IOCExer
                     container.RegisterType<IPhone, AndriodPhone>(new PerResolveLifetimeManager());
                 }
 
-                //{
-                //    Console.WriteLine("====Create container from configuration file====");
-                //    ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-                //    fileMap.ExeConfigFilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "CfgFiles\\Unity.Config");
-                //    Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
-                //    UnityConfigurationSection section = (UnityConfigurationSection)configuration.GetSection(UnityConfigurationSection.SectionName);
+                {
+                    Console.WriteLine("====Create container from configuration file====");
+                    ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
+                    fileMap.ExeConfigFilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "CfgFiles\\Unity.Config");
+                    Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+                    UnityConfigurationSection section = (UnityConfigurationSection)configuration.GetSection(UnityConfigurationSection.SectionName);
 
-                //    IUnityContainer container = new UnityContainer();
-                //    section.Configure(container, "testContainerAOP");
-                //    IPhone phone = container.Resolve<IPhone>();
-                //    phone.Call();
-                //}
+                    IUnityContainer containerF = new UnityContainer();
+                    section.Configure(containerF, "testContainer");
+                    IPhone phone = containerF.Resolve<IPhone>();
+                    phone.Call();
+                }
             }
 
 
